@@ -16,7 +16,7 @@ class CustomeUser(AbstractUser):
 
 class Category(models.Model):
     name = models.CharField(max_length=250)
-    slug = AutoSlugField(populate_from="name") 
+    slug = AutoSlugField(populate_from="name", unique=True) 
 
     def __str__(self):
         return self.name
@@ -33,7 +33,7 @@ class Product(models.Model):
     
     image = models.ImageField(upload_to='product/')
     name = models.CharField(max_length=250)
-    slug = AutoSlugField(populate_from="name")
+    slug = AutoSlugField(populate_from="name", unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     old_price = models.DecimalField(max_digits=10, decimal_places=2)
     sell_price = models.DecimalField(max_digits=10, decimal_places=2)

@@ -1,399 +1,89 @@
 {% extends 'wrapper.html' %}
 
-  {% block content %}
-      <div class="container-fluid">
-        <!--  Row 1 -->
+{% block content %}
+<div class="container-fluid">
+  <!--  Row 1 -->
 
-        <div class="d-flex justify-content-center">
-          <form action="" style="width: 100%;">
-            <label class="d-flex justify-content-center" style="width: 100%;">
-              <div class="row align-items-center justify-content-end border-primary"
-                style="border: 3px solid red; width: 100%; border-radius: 30px; overflow: hidden;">
-                <div class="col-auto d-flex align-items-center ">
-                  <svg xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-search icon icon-search-icon" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="10" cy="10" r="7"></circle>
-                    <line x1="21" y1="21" x2="15" y2="15"></line>
-                  </svg>
-                </div>
-                <div class="col">
-                  <input type="search" class="border-0 p-2" placeholder="Mahsulot nomini" style="width: 100%;">
-                </div>
-              </div>
-            </label>
-          </form>
-        </div>
-        <div class="col-lg-12 d-flex align-items-stretch mt-5">
-          <div class="card w-100">
-            <div class="card-body p-4">
-              <h5 class="card-title fw-semibold mb-4">Barcha mahsulotlar <a href="/products/add/"><button class="btn btn-primary">+</button></a></h5>
-              <div class="table-responsive">
-                <table class="table text-nowrap mb-0 align-middle">
-                  <thead class="text-dark fs-4">
-                    <tr>
-                      <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Id</h6>
-                      </th>
-                      <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Mahsulot nomi</h6>
-                      </th>
-                      <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Miqdori</h6>
-                      </th>
-                      <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Narxi</h6>
-                      </th>
-                      <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Tahrir</h6>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                        <h3 class="open_modal cursor-pointer" data-id="1"><i class="ti ti-trash"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">1</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-1">Pepsi 0.5 litr</h6>
-                      </td>
-                      <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">25 dona</p>
-                      </td>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-danger rounded-3 fw-semibold">12 000</span>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
-                        <h3 class="delete cursor-pointer"><i class="ti ti-trash"></i></h3>
-                        <h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3>
-                      </td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div> 
-            </div>
+  <div class="d-flex justify-content-center">
+    <form action="" style="width: 100%;">
+      <label class="d-flex justify-content-center" style="width: 100%;">
+        <div class="row align-items-center justify-content-end border-primary"
+          style="border: 3px solid red; width: 100%; border-radius: 30px; overflow: hidden;">
+          <div class="col-auto d-flex align-items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search icon icon-search-icon"
+              width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="10" cy="10" r="7"></circle>
+              <line x1="21" y1="21" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <div class="col">
+            <input type="search" class="border-0 p-2" placeholder="Mahsulot nomini" style="width: 100%;">
           </div>
         </div>
+      </label>
+    </form>
+  </div>
+  <div class="col-lg-12 d-flex align-items-stretch mt-5">
+    <div class="card w-100">
+      <div class="card-body p-4">
+        <h5 class="card-title fw-semibold mb-4">Barcha mahsulotlar <a href="/products/add/"><button
+              class="btn btn-primary">+</button></a></h5>
+        <div class="table-responsive">
+          <table class="table text-nowrap mb-0 align-middle">
+            <thead class="text-dark fs-4">
+              <tr>
+                <th class="border-bottom-0">
+                  <h6 class="fw-semibold mb-0">Id</h6>
+                </th>
+                <th class="border-bottom-0">
+                  <h6 class="fw-semibold mb-0">Mahsulot nomi</h6>
+                </th>
+                <th class="border-bottom-0">
+                  <h6 class="fw-semibold mb-0">Miqdori</h6>
+                </th>
+                <th class="border-bottom-0">
+                  <h6 class="fw-semibold mb-0">Narxi</h6>
+                </th>
+                <th class="border-bottom-0">
+                  <h6 class="fw-semibold mb-0">Tahrir</h6>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {% for product in products %}
+                <tr>
+                  <td class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">{{ forloop.counter }}</h6>
+                  </td>
+                  <td class="border-bottom-0">
+                    <h6 class="fw-semibold mb-1">{{ product.name }}</h6>
+                  </td>
+                  <td class="border-bottom-0">
+                    <p class="mb-0 fw-normal">{{ product.amount }}</p>
+                  </td>
+                  <td class="border-bottom-0">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="badge bg-danger rounded-3 fw-semibold">{{ product.sell_price }}</span>
+                    </div>
+                  </td>
+                  <td class="border-bottom-0 d-flex justify-content-between" style="width: 50%; height: 100%;">
+                    <a href="update/{{ product.slug }}"><h3 class="edits cursor-pointer"><i class="ti ti-edit"></i></h3></a>
+                    <a href="delete/{{ product.slug }}"> <h3 class="open_modal cursor-pointer" data-id="1"><i class="ti ti-trash"></i></h3></a>
+                  </td>
+                </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="py-6 px-6 text-center">
-        <p class="mb-0 fs-4">Design and Developed by <a href="https://github.com/Azizbek20051905" target="_blank"
-            class="pe-1 text-primary text-decoration-underline">Azizbek Ilhomjonov</a></p>
-      </div>
-  {% endblock content %}
-  
+    </div>
+  </div>
+</div>
+<div class="py-6 px-6 text-center">
+  <p class="mb-0 fs-4">Design and Developed by <a href="https://github.com/Azizbek20051905" target="_blank"
+      class="pe-1 text-primary text-decoration-underline">Azizbek Ilhomjonov</a></p>
+</div>
+{% endblock content %}

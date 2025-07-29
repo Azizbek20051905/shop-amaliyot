@@ -6,11 +6,28 @@ def home(request):
     return render(request, "index.html")
 
 def productView(request):
-    return render(request, 'product.html')
+    products = Product.objects.all()
+
+    context = {
+        "products":products
+    }
+    return render(request, 'product.html', context)
+
+def updateProductView(request, slug):
+    product = Product.objects.get(slug=slug)
+    category = Category.objects.all()
+    
+    context = {
+        "page": "update",
+        'product': product,
+        "categories": category
+    }
+    return render(request, 'add_product.html', context)
 
 def productsAdd(request):
     categories = Category.objects.all()
     context = {
+        'page':"add",
         'categories':categories,
     }
 
@@ -47,5 +64,5 @@ def productsAdd(request):
 
         return redirect("shopp:products")
 
-    return render(request, 'add_product.html')
+    return render(request, 'add_product.html', context)
 
