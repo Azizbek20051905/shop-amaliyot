@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Category, Product
+from django.db.models import Q
 
 # Create your views here.
 def home(request):
@@ -61,6 +62,21 @@ def updateProductView(request, slug):
         return redirect("shopp:products")
     
     return render(request, 'add_product.html', context)
+
+def searchView(request):
+    # if request.method == "GET":
+    query = request.GET.get("q", "")
+    print()
+    print("q")
+    print(query)
+    print()
+    resaults = Product.objects.all()
+    if query:
+        resaults = Product.objects.filter(
+                Q(name__icontains=query) | Q(category__name__icontains=query)
+            )
+    
+    return render(request, "product.html", {'query': query, 'products':resaults})
 
 def productsAdd(request):
     categories = Category.objects.all()
