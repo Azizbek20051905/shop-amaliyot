@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 from .models import Category, Product
 from django.db.models import Q
 
 # Create your views here.
+@login_required(login_url='/login/')
 def home(request):
     return render(request, "index.html")
 
@@ -119,4 +122,11 @@ def productsAdd(request):
         return redirect("shopp:products")
 
     return render(request, 'add_product.html', context)
+
+def loginPage(request):
+    return render(request, 'authentication-login.html')
+
+def logouts(request):
+    logout(request)
+    return redirect('/')
 

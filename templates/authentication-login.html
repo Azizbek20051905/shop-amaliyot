@@ -1,3 +1,5 @@
+{% load static %}
+{% load socialaccount %}
 <!doctype html>
 <html lang="en">
 
@@ -5,9 +7,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  {% comment %} <link rel="shortcut icon" type="image/png" href="{% static "/assets/images/logos/favicon.png" %}" /> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="{% static "/assets/css/styles.min.css" %}" /> {% endcomment %}
 </head>
+
+<style>
+    :root{
+      --google:#d9534f;
+      --instagram:#3f729b;
+      --linkedin:#0077b5;
+      --btn-height:56px;
+      --icon-width:78px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif;background:#f5f7fa;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+
+    .wrap{width:520px;max-width:94%;}
+    .btn{display:flex;align-items:center;height:var(--btn-height);width:100%;color:#fff;text-decoration:none;border-radius:8px;overflow:hidden;margin:14px 0;box-shadow:0 2px 0 rgba(0,0,0,0.06);font-size:20px}
+
+    .btn .icon{display:flex;align-items:center;justify-content:center;width:var(--icon-width);height:100%;flex:0 0 var(--icon-width);background:rgba(0,0,0,0.06);border-right:1px solid rgba(255,255,255,0.12)}
+    .btn .text{flex:1;padding-left:20px}
+
+    .btn.google{background:var(--google)}
+    .btn.instagram{background:var(--instagram)}
+    .btn.linkedin{background:var(--linkedin)}
+
+    /* Slight hover darken */
+    .btn:hover{filter:brightness(.94)}
+
+    /* Icon visuals */
+    .logo-circle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:6px;background:rgba(255,255,255,0.12);font-weight:700;color:#fff;font-size:20px}
+
+    /* small responsive tweaks */
+    @media (max-width:420px){
+      .btn{font-size:18px}
+      :root{--icon-width:64px}
+    }
+  </style>
 
 <body>
   <!--  Body Wrapper -->
@@ -47,6 +83,38 @@
                     <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
                     <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
                   </div>
+
+                  <div class="wrap">
+                    <a class="btn google" href="{% provider_login_url 'google' %}" aria-label="Sign in with Google">
+                      <span class="icon">
+                        <span class="logo-circle">G</span>
+                      </span>
+                      <span class="text">Sign in with Google</span>
+                    </a>
+
+                    <a class="btn instagram" href="#" aria-label="Sign in with Instagram">
+                      <span class="icon">
+                        <span class="logo-circle" aria-hidden="true">
+                          <!-- simple camera icon using SVG -->
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M7 7h10l1 1v8l-1 1H7l-1-1V8l1-1z" stroke="#fff" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            <circle cx="12" cy="12" r="2.75" stroke="#fff" stroke-width="1.4" fill="none" />
+                          </svg>
+                        </span>
+                      </span>
+                      <span class="text">Sign in with Instagram</span>
+                    </a>
+
+                    <a class="btn linkedin" href="#" aria-label="Sign in with LinkedIn">
+                      <span class="icon">
+                        <span class="logo-circle">in</span>
+                      </span>
+                      <span class="text">Sign in with LinkedIn</span>
+                    </a>
+                  </div>
+
                 </form>
               </div>
             </div>
@@ -55,8 +123,7 @@
       </div>
     </div>
   </div>
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 
 </html>

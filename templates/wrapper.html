@@ -72,12 +72,21 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-user-plus"></i>
-                                </span>
-                                <span class="hide-menu">Register</span>
-                            </a>
+                            {% if request.user %}
+                                <a class="sidebar-link" href="./logout/" aria-expanded="false">
+                                    <span>
+                                        <i class="ti ti-user-plus"></i>
+                                    </span>
+                                    <span class="hide-menu">Logout</span>
+                                </a>
+                            {% else %}
+                                <a class="sidebar-link" href="./login/" aria-expanded="false">
+                                    <span>
+                                        <i class="ti ti-user-plus"></i>
+                                    </span>
+                                    <span class="hide-menu">Login</span>
+                                </a>
+                            {% endif %}
                         </li>
                     </ul>
                 </nav>
